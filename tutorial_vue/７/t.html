@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello World</title>
+        <link href="style.css" rel="stylesheet" />
+        <script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+    </head>
+    <body>
+   
+     <div id="app">
+         <ul>
+             <li v-for="item in colors">
+                 {{item}}
+             </li>
+         </ul>
+         <ul>
+             <li v-for="item in home" @click="myfa(item.father)">
+                 {{item.father}}
+             </li>
+         </ul>
+     </div>
+
+  <script src="app.js"></script>
+    </body>
+</html>

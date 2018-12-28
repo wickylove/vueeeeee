@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello World</title>
+        <link href="style.css" rel="stylesheet" />
+        <script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+    </head>
+    <body>
+   
+        <div id="app">
+        <h1>Computed Properties</h1>
+        <button @click="a++">Add to A</button>
+        <button @click="b++">Add to B</button>
+        <p>A: {{a}}</p>
+        <p>b: {{b}}</p>
+        <!-- computed property you will see on console that they are separated-->
+        <p>Age+A ={{addToA}}</p>
+        <p>Age+B ={{addToB}}</p>    
+    </div>
+
+  <script src="app.js"></script>
+    </body>
+</html>

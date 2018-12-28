@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello World</title>
+        <link href="style.css" rel="stylesheet" />
+        <script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+    </head>
+    <body>
+   
+        <div id="app">
+            <!-- only once -->
+            <button @click.once="year++">ADD</button>
+            <button v-on:click.once="year--">Subtract</button>
+            <p>my age is {{year}}</p>
+            <button v-on:click="add(1)">ADD</button>
+            <button v-on:click="subtract(1)">Subtract</button>
+            <!-- double click -->
+            <button @dblclick="add(10)">ADD</button>
+            <button v-on:dblclick="subtract(10)">Subtract</button>
+            <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}</div>
+            <a @click="click" href="https://www.thenetninja.co.uk/">ninja</a>
+            <a @click.prevent="click" href="https://www.thenetninja.co.uk/">ninja</a>
+        </div>
+
+  <script src="app.js"></script>
+    </body>
+</html>

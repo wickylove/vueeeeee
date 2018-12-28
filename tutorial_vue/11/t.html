@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello World</title>
+        <link href="style.css" rel="stylesheet" />
+        <script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+    </head>
+    <body>
+   
+        <div id="app">
+            <!--沒有v-bind: 就會變成ParentMsg指定成"msg"-->
+            <my1 v-bind:parent-msg="msg"></my1>
+        </div>
+
+        <script type="text/x-template" id="my1">
+            <div class="component">
+                <div> ParentMsg: {{parentMsg}}</div>
+                <div> ChildMsg: {{msg}}</div>
+            </div>    
+        </script>
+
+  <script src="app.js"></script>
+    </body>
+</html>  

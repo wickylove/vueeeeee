@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello World</title>
+        <link href="style.css" rel="stylesheet" />
+        <script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+    </head>
+    <body>
+   
+     <div id="app">
+        <h1>Dynamic css</h1>
+        
+        <h2>example 1</h2>
+        <!--<div @click="available = !available"  v-bind:class="{available:available}">
+            <span>Ryu</span>
+        </div> -->
+        
+        <h2>example 2</h2>
+        <button @click="nearby= !nearby">toggle nearby</button>
+        <button @click="available = !available">toogle available</button>
+        <div v-bind:class="compClasses">
+            <span>Ryu</span>
+        </div>
+     </div>
+
+  <script src="app.js"></script>
+    </body>
+</html>
