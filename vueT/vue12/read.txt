@@ -1,0 +1,4 @@
+npm init
+npm i json-server
+package.json裡面的script
+npm run json ((npm run json-server

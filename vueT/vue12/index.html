@@ -1,0 +1,35 @@
+<html>
+<body>
+    <div id="app">
+        <section v-if="loading">  
+            Loaing....
+        </section>
+        <section v-else >
+            <div class="container">
+                <div class="title">
+                <div class="input" style="font-size: 0px; ">
+                    <input type="text" placeholder="會員名稱" v-model.tirm="input.name"> 
+                    <input type="text" placeholder="電子信箱"v-model.trim="input.email">
+                    <button @click="submitHandler">送出</button>
+                    <button @click="cancelHandler">取消</button>
+                </div> 
+                    <div class="menu">
+                        <div class="menuItem" v-for="(item, index) in contacts">
+                            <span class="number">{{ item.id }}</span>
+                            <span class="type">{{ item.name }}</span>
+                            <a :href="'mailto :'+item.email" target="vue-iron" class="title">
+                                {{ item.email }}
+                            </a>
+                                <span class='edit' @click="editHandler(index)">修改</span>
+                                <span class='delete'@click="deleteHandler(index)">刪除</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src="day.js"></script>
+</body>
+    </html>
