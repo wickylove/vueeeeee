@@ -1,0 +1,41 @@
+<html>
+<body>
+    <div id="app">
+        <section>
+            <div class="container">
+                <div class="title">
+                    <div 
+                        class="input"
+                        style="font-size: 0px"
+                    >
+                    <select v-model="input.type">
+                        <option :value="null">請選擇</option>
+                        <option v-for="item in typeList.sort">{{item}}</option>
+                    </select>
+                    <select style="width:720px" v-model="input.title">
+                        <option :value="null">請選擇</option>
+                        <option v-for="item in titleList.sort">{{item}}</option>
+                    </select>
+                    </div>
+                    <div
+                        v-if="content"
+                        class="menuItem"
+                    >
+                    <span class="number">{{content.index + 1 }}</span>
+                    <a
+                        :href="content.link"
+                        target="vue-iron"
+                        class="title" 
+                    >
+                    {{content.link}} 
+                    </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="day.js"></script>
+</body>
+    </html>
