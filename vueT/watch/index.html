@@ -1,0 +1,32 @@
+<html>
+<body>
+    <div id="app">
+        <section>
+            <div class="container">
+                <div class="title">
+                 <div class="descirption">
+                     <div @click="number++">{{number}}</div>
+                </div>
+                <br>
+                <div class="descripiton">
+                    <div @click="obj.num++">{{ obj.num }}</div>
+                </div>
+                <br>
+                <div class="description" >
+                    <span v-for="(item,index) in objList" @click="objListHandler(index)">{{ item.num }}</span>
+                </div>
+                <br>
+                <div class="descirption">
+                   <span v-for="(number,index) in numberList" @click="numberListHandler(index)"> {{ number }}</span>
+                </div>
+         
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="day.js"></script>
+</body>
+    </html>
